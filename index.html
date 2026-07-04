@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Макс ворк (SixtyWork | MAX RENT) — Отзывы, заработок на аренде номеров</title>
+    
+    <!-- SEO & Indexing Meta -->
+    <meta name="description" content="Официальный хаб SixtyWork (Макс ворк). Премиальная автоматизированная платформа для монетизации сим-карт и аренды телефонных номеров. Инструкции, калькулятор прибыли и автоматический запуск.">
+    <meta name="keywords" content="макс ворк, sixtywork, max rent, sixtymaxbot, заработок на аренде номеров, куда сдать сим карты, пассивный доход, заработок в телеграм, обход фрода сим карт">
+    <meta name="robots" content="index, follow">
+
+    <!-- OpenGraph Social Tags -->
+    <meta property="og:title" content="SixtyWork MAX RENT — Премиальный Хаб Аренды Номеров">
+    <meta property="og:description" content="Полная автоматизация, интерактивные мануалы, калькулятор доходности и моментальные выплаты в один клик.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://m34366880-gif.github.io/sixtymaxbot/">
+    
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#020204',
+                        panelBg: 'rgba(10, 12, 20, 0.4)',
+                        emeraldGlow: '#10b981',
+                        accentBlue: '#3b82f6',
+                        accentPurple: '#8b5cf6'
+                    },
+                    boxShadow: {
+                        'premium': '0 20px 50px rgba(0, 0, 0, 0.7)',
+                        'neon-emerald': '0 0 30px rgba(16, 185, 129, 0.25)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Modern Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #020204;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(16, 185, 129, 0.3);
+        }
+
+        /* Apple Glassmorphism Premium */
+        .glass-panel {
+            background: rgba(8, 10, 16, 0.55);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), inset 0 1px 1px rgba(255, 255, 255, 0.05);
+        }
+
+        .glass-card {
+            position: relative;
+            background: rgba(255, 255, 255, 0.01);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s, background-color 0.4s;
+        }
+
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            padding: 1.5px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 50%, rgba(16,185,129,0.05) 100%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-6px) scale(1.01);
+            background: rgba(255, 255, 255, 0.025);
+            border-color: rgba(16, 185, 129, 0.3);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(16, 185, 129, 0.08);
+        }
+
+        /* Ambient light blobs movement */
+        @keyframes floatBlob1 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(60px, -90px) scale(1.2); }
+            66% { transform: translate(-40px, 40px) scale(0.85); }
+        }
+        @keyframes floatBlob2 {
+            0%, 100% { transform: translate(0, 0) scale(1.1); }
+            50% { transform: translate(-80px, 60px) scale(0.8); }
+        }
+        @keyframes floatBlob3 {
+            0%, 100% { transform: translate(0, 0) scale(0.9); }
+            50% { transform: translate(70px, -50px) scale(1.15); }
+        }
+
+        .ambient-orb-1 {
+            animation: floatBlob1 24s ease-in-out infinite;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.14) 0%, rgba(0,0,0,0) 70%);
+        }
+        .ambient-orb-2 {
+            animation: floatBlob2 30s ease-in-out infinite;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.09) 0%, rgba(0,0,0,0) 70%);
+        }
+        .ambient-orb-3 {
+            animation: floatBlob3 26s ease-in-out infinite;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.07) 0%, rgba(0,0,0,0) 70%);
+        }
+
+        /* Shimmer effects for premium UI buttons */
+        @keyframes premiumShimmer {
+            100% { left: 150%; }
+        }
+        .premium-shimmer-btn {
+            position: relative;
+            overflow: hidden;
+        }
+        .premium-shimmer-btn::after {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%; width: 60%; height: 100%;
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+            transform: skewX(-30deg);
+            animation: premiumShimmer 5s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        /* Interactive ranges input styling */
+        input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 999px;
+            outline: none;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #10b981;
+            cursor: pointer;
+            box-shadow: 0 0 20px #10b981, inset 0 1px 1px rgba(255, 255, 255, 0.5);
+            border: 2.5px solid #020204;
+            transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.4);
+        }
+
+        /* Glowing tabs border animation */
+        .tab-glow-active {
+            border-bottom: 2px solid #10b981;
+            color: #ffffff;
+            background: linear-gradient(180deg, rgba(16, 185, 129, 0) 0%, rgba(16, 185, 129, 0.04) 100%);
+            text-shadow: 0 0 12px rgba(16, 185, 129, 0.6);
+        }
+
+        /* Dynamic Island animation states */
+        .island-expanded {
+            width: 250px !important;
+            height: 52px !important;
+            border-radius: 22px !important;
+            background-color: #0b0c10 !important;
+            border: 1.5px solid rgba(16, 185, 129, 0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        }
+
+        /* Numeric keyboard styling iOS */
+        .ios-key {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+            transition: background 0.1s, transform 0.1s;
+        }
+        .ios-key:active {
+            background: rgba(255, 255, 255, 0.25);
+            transform: scale(0.92);
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-gray-200 antialiased overflow-x-hidden min-h-screen relative selection:bg-emerald-500/30 selection:text-white">
+
+    <!-- Ambient Glow Backdrops -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        <div class="absolute ambient-orb-1 w-[800px] h-[800px] top-[-200px] left-[-250px] rounded-full filter blur-[120px]"></div>
+        <div class="absolute ambient-orb-2 w-[900px] h-[900px] top-[30%] right-[-300px] rounded-full filter blur-[140px]"></div>
+        <div class="absolute ambient-orb-3 w-[700px] h-[700px] bottom-[-200px] left-[15%] rounded-full filter blur-[110px]"></div>
+    </div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 left-0 w-full z-50 glass-panel border-b border-white/5 backdrop-blur-2xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3.5">
+                <!-- Vector Premium Logo -->
+                <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-emerald-500 via-teal-400 to-blue-500 p-[1px] shadow-[0_0_25px_rgba(16,185,129,0.35)]">
+                    <div class="w-full h-full bg-[#05060a] rounded-2xl flex items-center justify-center">
+                        <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div>
+                    <span class="text-2xl font-black tracking-tight text-white block">SixtyWork</span>
+                    <span class="text-[9px] text-emerald-400 tracking-widest uppercase font-black">MAX RENT v2.5</span>
+                </div>
+            </div>
+
+            <!-- Online Status Indicator -->
+            <div class="hidden md:flex items-center space-x-3 bg-emerald-500/5 px-4 py-2 rounded-full border border-emerald-500/15">
+                <span class="flex h-2.5 w-2.5 relative">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                </span>
+                <span class="text-[10px] font-extrabold text-emerald-400 uppercase tracking-widest">System Cloud Online • 99.9%</span>
+            </div>
+
+            <div class="flex items-center space-x-6">
+                <a href="#calculator" class="hidden lg:block text-xs font-bold text-gray-400 hover:text-white uppercase tracking-wider transition">Калькулятор</a>
+                <a href="#manuals" class="hidden lg:block text-xs font-bold text-gray-400 hover:text-white uppercase tracking-wider transition">Мануалы</a>
+                <a href="#faq" class="hidden lg:block text-xs font-bold text-gray-400 hover:text-white uppercase tracking-wider transition">Вопросы</a>
+                
+                <a href="https://t.me/SixtyMaxBot" target="_blank" class="premium-shimmer-btn inline-flex items-center space-x-2.5 px-6 py-3 rounded-2xl text-xs font-black bg-gradient-to-r from-emerald-500 via-emerald-400 to-teal-400 text-black hover:opacity-95 transition transform active:scale-95 shadow-[0_0_30px_rgba(16,185,129,0.35)]">
+                    <span>Запустить софт</span>
+                    <svg class="w-4.5 h-4.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        
+        <!-- HERO & IPHONE SIMULATOR SECTION -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center pt-6 pb-24">
+            <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                <div class="inline-flex items-center space-x-3 bg-emerald-500/10 border border-emerald-500/20 px-4 py-2 rounded-full text-xs font-bold text-emerald-400">
+                    <span class="inline-block animate-bounce">🛡️</span>
+                    <span>Регламентированные обходы спам-фильтров</span>
+                </div>
+                <!-- CRITICAL SEO H1 INTEGRATION -->
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-tight">
+                    Макс ворк — SixtyWork MAX RENT: <span class="bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 via-teal-300 to-blue-400 font-extrabold drop-shadow-[0_0_30px_rgba(16,185,129,0.25)]">Заработок на аренде номеров</span>
+                </h1>
+                <p class="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                    Сдавайте номера в аренду на полностью автоматизированной платформе <b>MAX RENT</b>. Ультра-премиальный стеклянный интерфейс внутри Telegram Mini App, моментальная обработка сессий и честная казна с автовыплатами.
+                </p>
+                
+                <div class="grid grid-cols-3 gap-5 pt-4 max-w-lg mx-auto lg:mx-0">
+                    <div class="glass-card p-6 rounded-3xl text-center">
+                        <span class="block text-2xl sm:text-3xl font-black text-white">1.2 сек</span>
+                        <span class="text-[10px] text-gray-500 uppercase font-bold tracking-widest mt-1.5 block">Прием SMS</span>
+                    </div>
+                    <div class="glass-card p-6 rounded-3xl text-center">
+                        <span class="block text-2xl sm:text-3xl font-black text-emerald-400">0%</span>
+                        <span class="text-[10px] text-gray-500 uppercase font-bold tracking-widest mt-1.5 block">Комиссий</span>
+                    </div>
+                    <div class="glass-card p-6 rounded-3xl text-center">
+                        <span class="block text-2xl sm:text-3xl font-black text-white">45 сек</span>
+                        <span class="text-[10px] text-gray-500 uppercase font-bold tracking-widest mt-1.5 block">Средний вывод</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-5 pt-4">
+                    <a href="https://t.me/SixtyMaxBot" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-5 rounded-2xl text-sm font-black bg-gradient-to-r from-emerald-500 via-emerald-400 to-teal-500 text-black hover:opacity-90 transition transform hover:scale-[1.02] active:scale-95 shadow-[0_5px_30px_rgba(16,185,129,0.35)]">
+                        <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .34z"/>
+                        </svg>
+                        Запустить SixtyWork Bot
+                    </a>
+                    <a href="#manuals" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-5 rounded-2xl text-sm font-bold bg-white/5 text-white hover:bg-white/10 border border-white/10 transition backdrop-blur-md">
+                        Читать Базу Знаний
+                    </a>
+                </div>
+            </div>
+
+            <!-- TRUE IPHONE 16 PRO SIMULATOR -->
+            <div class="lg:col-span-5 relative flex justify-center">
+                <div class="absolute inset-0 bg-gradient-to-tr from-emerald-500/10 via-blue-500/10 to-transparent rounded-[60px] filter blur-3xl pointer-events-none"></div>
+                
+                <!-- iPhone Bezel Frame -->
+                <div class="relative w-[360px] h-[670px] rounded-[52px] border-[8px] border-[#181920] bg-black shadow-[0_35px_120px_-15px_rgba(0,0,0,0.95)] p-2 overflow-hidden flex flex-col justify-between">
+                    
+                    <!-- Dynamic Island (Pill) -->
+                    <div id="dynamic-island" class="absolute top-4 left-1/2 transform -translate-x-1/2 w-28 h-[25px] bg-[#0c0d12] rounded-full z-50 transition-all duration-500 flex items-center justify-center px-3 overflow-hidden">
+                        <div id="island-inner" class="hidden w-full h-full flex items-center justify-between text-white text-[9px] font-bold">
+                            <span class="flex items-center space-x-1.5 text-emerald-400">
+                                <span class="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-ping"></span>
+                                <span>SMS Telegram</span>
+                            </span>
+                            <span id="island-sms-code" class="bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-md text-[10px] tracking-wider font-extrabold animate-pulse">Code: 841-25</span>
+                        </div>
+                    </div>
+
+                    <!-- iOS Status Bar -->
+                    <div class="absolute top-4 left-0 w-full px-7 flex items-center justify-between text-[11px] font-bold text-gray-300 z-40 select-none">
+                        <span id="ios-clock">09:41</span>
+                        <div class="flex items-center space-x-1.5">
+                            <!-- Signal Bars SVG -->
+                            <svg class="w-4 h-3 text-gray-300 fill-current" viewBox="0 0 16 12">
+                                <rect x="1" y="8" width="2" height="4" rx="0.5" />
+                                <rect x="4" y="6" width="2" height="6" rx="0.5" />
+                                <rect x="7" y="4" width="2" height="8" rx="0.5" />
+                                <rect x="10" y="2" width="2" height="10" rx="0.5" />
+                                <rect x="13" y="0" width="2" height="12" rx="0.5" />
+                            </svg>
+                            <!-- Wifi SVG -->
+                            <svg class="w-4 h-3 text-gray-300 fill-none stroke-current" stroke-width="2" viewBox="0 0 16 12">
+                                <path d="M1 3.5c4-4 10-4 14 0M3 6c2.5-2.5 7.5-2.5 10 0M5.5 8.5c1.5-1.5 3.5-1.5 5 0M8 11.5v.01" stroke-linecap="round"/>
+                            </svg>
+                            <!-- Battery SVG -->
+                            <div class="w-5.5 h-3 border border-gray-300 rounded-[4px] p-[1.5px] flex items-center relative">
+                                <div id="ios-battery-fill" class="h-full w-[85%] bg-emerald-400 rounded-[2px] transition-all duration-1000"></div>
+                                <div class="absolute -right-[3px] top-1/2 -translate-y-1/2 w-[2px] h-[4px] bg-gray-300 rounded-r-[1px]"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Simulated Screen Frame -->
+                    <div class="flex-1 w-full bg-[#040508] rounded-[44px] overflow-hidden flex flex-col pt-9 pb-1 relative">
+                        
+                        <!-- Mini App Shell Header -->
+                        <div class="px-4 py-2 border-b border-white/5 flex items-center justify-between text-[10px] text-gray-400 select-none bg-[#07090e]/90">
+                            <div class="flex items-center space-x-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                                <span class="font-bold tracking-wider text-white">MAX RENT CLIENT v2.5</span>
+                            </div>
+                            <span class="text-[9px] bg-white/5 px-2 py-0.5 rounded-full border border-white/5">Secure Session</span>
+                        </div>
+
+                        <!-- Mini App Active Workspace Container -->
+                        <div class="flex-1 overflow-hidden relative flex flex-col justify-between p-4">
+                            
+                            <!-- SCREEN 1: SIMULATOR DASHBOARD -->
+                            <div id="sim-screen-dashboard" class="flex flex-col space-y-3 flex-1 justify-start">
+                                <!-- Global Treasury -->
+                                <div class="glass-panel p-3.5 rounded-2xl border border-white/10 text-center relative overflow-hidden">
+                                    <div class="absolute -top-12 -right-12 w-24 h-24 bg-emerald-500/10 rounded-full filter blur-xl"></div>
+                                    <span class="text-[8px] text-gray-400 uppercase tracking-widest font-bold block">КАЗНА SixtyWork</span>
+                                    <span id="sim-total-treasury" class="text-xl font-black text-white">$6,366.61</span>
+                                    <span class="text-[8px] text-emerald-400 font-extrabold block mt-0.5 uppercase tracking-wider">Обновляется онлайн</span>
+                                </div>
+
+                                <!-- Dynamic Flow Panel inside iOS -->
+                                <div id="interactive-ios-panel" class="glass-panel p-3 rounded-xl border border-emerald-500/20 text-center relative overflow-hidden flex-1 flex flex-col justify-center">
+                                    <div id="sim-interactive-workspace" class="h-full flex flex-col justify-center items-center text-center space-y-3">
+                                        <!-- Step 1 Initial view inside iOS -->
+                                        <div id="ios-flow-step-1" class="space-y-3.5 w-full">
+                                            <div class="flex flex-col items-center">
+                                                <div class="w-10 h-10 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-2">
+                                                    <svg class="w-5.5 h-5.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2" stroke-width="2"/>
+                                                        <path d="M12 18h.01" stroke-width="2" stroke-linecap="round"/>
+                                                    </svg>
+                                                </div>
+                                                <h4 class="text-[11px] font-black uppercase text-white tracking-wider">Тест симулятора сдачи</h4>
+                                                <p class="text-[9px] text-gray-400 max-w-[200px] mt-1 leading-normal">Пройдите полный интерактивный цикл сдачи номера прямо в этом айфоне!</p>
+                                            </div>
+                                            <button onclick="advanceIosSim(2)" class="premium-shimmer-btn w-full py-2.5 bg-gradient-to-r from-emerald-500 to-teal-500 hover:scale-[1.01] active:scale-95 text-black font-black text-[9px] rounded-xl tracking-wider uppercase transition">
+                                                🚀 Сдать тестовый номер
+                                            </button>
+                                        </div>
+
+                                        <!-- Step 2 Input view inside iOS -->
+                                        <div id="ios-flow-step-2" class="hidden space-y-2.5 w-full text-left">
+                                            <label class="text-[8px] text-gray-400 block font-bold uppercase tracking-wider">Введите номер для теста:</label>
+                                            <div class="flex space-x-1.5">
+                                                <div class="flex-1 bg-black/40 border border-white/10 text-white rounded-lg px-2.5 py-2 text-[10px] flex items-center justify-between select-none">
+                                                    <span id="ios-phone-input" class="text-emerald-400 font-extrabold">+7 (___) ___-__-__</span>
+                                                    <span class="text-gray-600 animate-pulse">|</span>
+                                                </div>
+                                                <button onclick="advanceIosSim(3)" id="ios-btn-submit-phone" class="bg-emerald-500 hover:bg-emerald-400 text-black px-3 py-2 rounded-lg text-[9px] font-black uppercase transition-all duration-300 opacity-50 cursor-not-allowed" disabled>ОК</button>
+                                            </div>
+                                            <!-- Keyboard wrapper -->
+                                            <div class="grid grid-cols-3 gap-1.5 pt-1.5 select-none" id="ios-keyboard">
+                                                <button onclick="tapIosKey('1')" class="ios-key py-2.5 text-[10px] font-black text-white">1</button>
+                                                <button onclick="tapIosKey('2')" class="ios-key py-2.5 text-[10px] font-black text-white">2</button>
+                                                <button onclick="tapIosKey('3')" class="ios-key py-2.5 text-[10px] font-black text-white">3</button>
+                                                <button onclick="tapIosKey('4')" class="ios-key py-2.5 text-[10px] font-black text-white">4</button>
+                                                <button onclick="tapIosKey('5')" class="ios-key py-2.5 text-[10px] font-black text-white">5</button>
+                                                <button onclick="tapIosKey('6')" class="ios-key py-2.5 text-[10px] font-black text-white">6</button>
+                                                <button onclick="tapIosKey('7')" class="ios-key py-2.5 text-[10px] font-black text-white">7</button>
+                                                <button onclick="tapIosKey('8')" class="ios-key py-2.5 text-[10px] font-black text-white">8</button>
+                                                <button onclick="tapIosKey('9')" class="ios-key py-2.5 text-[10px] font-black text-white">9</button>
+                                                <button onclick="tapIosKey('C')" class="ios-key py-2.5 text-[10px] font-black text-red-400 bg-red-500/10">C</button>
+                                                <button onclick="tapIosKey('0')" class="ios-key py-2.5 text-[10px] font-black text-white">0</button>
+                                                <button onclick="tapIosKey('+')" class="ios-key py-2.5 text-[10px] font-black text-emerald-400 bg-emerald-500/10">+</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Step 3 Processing View inside iOS -->
+                                        <div id="ios-flow-step-3" class="hidden flex flex-col items-center justify-center py-4 space-y-3 w-full">
+                                            <div class="relative w-10 h-10">
+                                                <div class="absolute inset-0 border-2 border-emerald-500/10 rounded-full"></div>
+                                                <div class="absolute inset-0 border-2 border-emerald-400 border-t-transparent rounded-full animate-spin"></div>
+                                            </div>
+                                            <div class="text-center space-y-1">
+                                                <p id="ios-proc-status" class="text-[9px] text-emerald-400 font-extrabold uppercase animate-pulse">Оптимизация фрод-фильтра...</p>
+                                                <p class="text-[8px] text-gray-500">Приватный SOCKS5 прокси активен</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Step 4 Success view inside iOS -->
+                                        <div id="ios-flow-step-4" class="hidden space-y-3 w-full text-center">
+                                            <div class="flex flex-col items-center">
+                                                <div class="w-10 h-10 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-1.5 animate-bounce">
+                                                    <span>✔</span>
+                                                </div>
+                                                <h4 class="text-[11px] font-black uppercase text-emerald-400 tracking-wider">Успешный ворк!</h4>
+                                                <p class="text-[8px] text-gray-400 max-w-[200px] leading-normal mt-1">Отказ оператора обойден. Награда успешно зачислена в казну.</p>
+                                            </div>
+                                            <button onclick="advanceIosSim(1)" class="w-full py-2.5 bg-white/5 border border-white/10 hover:bg-white/10 text-white font-extrabold text-[9px] rounded-xl tracking-wider uppercase transition">
+                                                🔄 Сдать еще один
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Transaction log live headers -->
+                                <div class="flex items-center justify-between text-[10px] font-bold text-gray-400 px-1 select-none">
+                                    <span>Выплаты онлайн</span>
+                                    <span class="text-emerald-400 text-[9px] tracking-wider uppercase flex items-center">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-1 animate-ping"></span>
+                                        Real-time
+                                    </span>
+                                </div>
+
+                                <!-- Transaction list (Strictly 6 names) -->
+                                <div class="space-y-1.5 flex-1 overflow-hidden" id="live-payouts-box">
+                                    <!-- Dynamic content added strictly from targetUsers -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Safe Space Indicator iOS -->
+                        <div class="w-1/3 h-1 bg-white/35 rounded-full mx-auto my-1.5 select-none pointer-events-none"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTERACTIVE CALCULATOR SECTION -->
+        <section id="calculator" class="py-16 scroll-mt-20">
+            <div class="glass-panel p-8 sm:p-14 rounded-[40px] border border-white/10 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-[400px] h-[400px] bg-emerald-500/5 rounded-full filter blur-[120px] pointer-events-none"></div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    <div class="lg:col-span-7 space-y-8">
+                        <div>
+                            <span class="text-xs font-black text-emerald-400 uppercase tracking-widest">Прозрачная калькуляция</span>
+                            <!-- CRITICAL SEO H2 INTEGRATION -->
+                            <h2 class="text-3xl sm:text-5xl font-black text-white mt-3">Калькулятор доходности SixtyWork | MAX RENT</h2>
+                            <p class="text-sm text-gray-400 mt-2">Посчитайте, сколько чистой прибыли будут генерировать ваши сим-карт при автоматической аренде в зависимости от режима сдачи.</p>
+                        </div>
+
+                        <!-- Toggle Custom segment selector -->
+                        <div class="space-y-3">
+                            <span class="text-sm font-bold text-gray-300">Режим сдачи номеров:</span>
+                            <div class="relative flex p-1 bg-black/40 rounded-2xl border border-white/5 max-w-md">
+                                <button onclick="selectRentType('regular')" id="btn-rent-regular" class="flex-1 py-3.5 text-center text-xs font-black uppercase tracking-wider rounded-xl transition duration-300 z-10 text-white bg-emerald-500/15 border border-emerald-500/20">
+                                    🌐 Обычная ($3.0)
+                                </button>
+                                <button onclick="selectRentType('fast')" id="btn-rent-fast" class="flex-1 py-3.5 text-center text-xs font-black uppercase tracking-wider rounded-xl transition duration-300 z-10 text-gray-400 hover:text-white">
+                                    ⭐ Быстрая ($2.5)
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Custom Sliders -->
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center text-sm font-bold">
+                                <span class="text-gray-300">Количество активных SIM-карт:</span>
+                                <span class="text-emerald-400 bg-emerald-500/10 px-3.5 py-1 rounded-xl border border-emerald-500/15 font-black" id="sim-value">15 SIM</span>
+                            </div>
+                            <input type="range" id="sim-range" min="1" max="100" value="15" class="w-full h-1 bg-white/10 rounded-lg appearance-none cursor-pointer">
+                        </div>
+
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center text-sm font-bold">
+                                <span class="text-gray-300">Среднее число сессий в день на SIM:</span>
+                                <span class="text-emerald-400 bg-emerald-500/10 px-3.5 py-1 rounded-xl border border-emerald-500/15 font-black" id="circles-value">4 круга</span>
+                            </div>
+                            <input type="range" id="circles-range" min="1" max="10" value="4" class="w-full h-1 bg-white/10 rounded-lg appearance-none cursor-pointer">
+                        </div>
+
+                        <!-- Info lists SVG custom -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-gray-400 pt-4">
+                            <div class="flex items-center space-x-3.5 bg-white/[0.01] p-4 rounded-2xl border border-white/5">
+                                <div class="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 flex-shrink-0">
+                                    <svg class="w-5.5 h-5.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <path d="M12 6v12M15 9H11.5a2.5 2.5 0 0 0 0 5H13a2.5 2.5 0 0 1 0 5H8.5" />
+                                    </svg>
+                                </div>
+                                <span>Физические SIM приносят в 1.5х больше прибыли, чем виртуальные.</span>
+                            </div>
+                            <div class="flex items-center space-x-3.5 bg-white/[0.01] p-4 rounded-2xl border border-white/5">
+                                <div class="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 flex-shrink-0">
+                                    <svg class="w-5.5 h-5.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                                    </svg>
+                                </div>
+                                <span>Автовыплаты от $10 поступают мгновенно без ограничений.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Calculator outputs -->
+                    <div class="lg:col-span-5 bg-[#040508] border border-white/5 rounded-[32px] p-8 flex flex-col justify-between space-y-6 relative overflow-hidden">
+                        <div class="absolute -bottom-20 -left-20 w-48 h-48 bg-emerald-500/5 rounded-full filter blur-[50px] pointer-events-none"></div>
+                        
+                        <div class="text-center">
+                            <span class="text-xs text-gray-500 uppercase font-black tracking-widest">Прогнозируемый профит</span>
+                            <div class="text-5xl sm:text-6xl font-black text-white mt-4 flex items-center justify-center">
+                                <span id="payout-result" class="bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-teal-300">$1,800</span>
+                                <span class="text-xs font-bold text-emerald-400 ml-2">/ месяц</span>
+                            </div>
+                            <p class="text-[10px] text-gray-500 mt-2">Точный расчет по регламентированным тарифам SixtyWork</p>
+                        </div>
+
+                        <!-- Real interactive SVG chart -->
+                        <div class="relative h-24 w-full bg-black/40 rounded-2xl border border-white/5 p-3 flex flex-col justify-between overflow-hidden">
+                            <span class="text-[9px] text-gray-500 font-extrabold uppercase text-left tracking-wider">Рост баланса за 12 месяцев</span>
+                            <svg class="absolute inset-x-0 bottom-0 w-full h-14" id="income-svg-chart" viewBox="0 0 300 50" preserveAspectRatio="none">
+                                <defs>
+                                    <linearGradient id="chart-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                        <stop offset="0%" stop-color="#10b981" stop-opacity="0.3"></stop>
+                                        <stop offset="100%" stop-color="#10b981" stop-opacity="0"></stop>
+                                    </linearGradient>
+                                </defs>
+                                <path id="chart-area-path" d="M0,50 L50,45 L100,40 L150,30 L200,20 L250,10 L300,0 L300,50 Z" fill="url(#chart-grad)"></path>
+                                <path id="chart-curve-path" d="M0,50 L50,45 L100,40 L150,30 L200,20 L250,10 L300,0" fill="none" stroke="#10b981" stroke-width="2.5"></path>
+                            </svg>
+                            <div class="flex justify-between text-[8px] text-gray-400 mt-auto z-10 font-bold px-1 select-none">
+                                <span>Старт</span>
+                                <span>6 мес</span>
+                                <span>12 мес</span>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4 relative z-10 text-sm">
+                            <div class="flex justify-between items-center text-gray-400 border-b border-white/5 pb-2.5">
+                                <span>Ежедневный доход</span>
+                                <span class="text-white font-extrabold" id="daily-result">$60.00</span>
+                            </div>
+                            <div class="flex justify-between items-center text-gray-400 border-b border-white/5 pb-2.5">
+                                <span>Прибыль за 6 месяцев</span>
+                                <span class="text-emerald-400 font-extrabold" id="half-year-result">$10,800</span>
+                            </div>
+                            <div class="flex justify-between items-center text-gray-400">
+                                <span>Годовой пассив</span>
+                                <span class="text-blue-400 font-extrabold" id="yearly-result">$21,600</span>
+                            </div>
+                        </div>
+
+                        <!-- PREMIUM GRADIENT BUTTON REPLACING OLD WHITE ONE -->
+                        <a href="https://t.me/SixtyMaxBot" target="_blank" class="premium-shimmer-btn relative group overflow-hidden w-full py-4.5 rounded-2xl flex items-center justify-center text-xs font-black text-white bg-gradient-to-r from-emerald-500/10 to-teal-500/10 border border-emerald-500/35 transition-all duration-300 hover:border-emerald-400 hover:shadow-[0_0_35px_rgba(16,185,129,0.3)]">
+                            <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-emerald-500 to-teal-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
+                            <span class="relative z-10 flex items-center tracking-wider uppercase">
+                                Занять Свободный Слот Ворк
+                                <svg class="w-4 h-4 ml-2.5 transform group-hover:translate-x-1.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 5l7 7-7 7"/>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WIKI HUB -->
+        <section id="manuals" class="py-16 scroll-mt-20">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-xs font-black text-emerald-400 uppercase tracking-widest">База Знаний SixtyWork</span>
+                <!-- CRITICAL SEO H2 INTEGRATION -->
+                <h2 class="text-3xl sm:text-5xl font-black text-white mt-1.5">Интерактивный Мануал по Ворку и База Знаний SixtyWork</h2>
+                <p class="text-sm text-gray-400 mt-2">Секреты выжимания максимального дохода с сим-карт и обход спам-фильтров операторов от профессионалов.</p>
+            </div>
+
+            <!-- Custom Tabs -->
+            <div class="flex flex-wrap border-b border-white/10 mb-8 text-xs sm:text-sm font-bold">
+                <button onclick="switchTab('sim-prep')" id="tab-btn-sim-prep" class="tab-btn px-6 py-4.5 text-gray-400 hover:text-white transition-all duration-300 tab-glow-active rounded-t-2xl">
+                    1. Подготовка SIM-карт
+                </button>
+                <button onclick="switchTab('anti-fraud')" id="tab-btn-anti-fraud" class="tab-btn px-6 py-4.5 text-gray-400 hover:text-white transition-all duration-300 rounded-t-2xl">
+                    2. Обход Фрод-Фильтров
+                </button>
+                <button onclick="switchTab('payouts-rules')" id="tab-btn-payouts-rules" class="tab-btn px-6 py-4.5 text-gray-400 hover:text-white transition-all duration-300 rounded-t-2xl">
+                    3. Тарифы и Выплаты
+                </button>
+            </div>
+
+            <!-- Tab Content -->
+            <div id="tab-sim-prep" class="tab-content block space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="space-y-5">
+                        <h3 class="text-2xl sm:text-3xl font-black text-white">Как подготовить сим-карта для сдачи</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed">
+                            Чтобы ваши номера работали без блокировок со стороны оператора, соблюдайте базовый алгоритм прогрева. Поисковые роботы фиксируют повышенный интерес к этой теме, поэтому мы выкладываем этот регламент в открытый доступ.
+                        </p>
+                        <ul class="space-y-4 text-xs text-gray-400">
+                            <li class="flex items-start space-x-3.5 bg-white/[0.01] p-4 rounded-2xl border border-white/5">
+                                <span class="text-emerald-400 font-extrabold mt-0.5 text-sm">✔</span>
+                                <span><b>Предварительный прогрев:</b> Перед вводом номера в бота, подержите сим-карта в активном телефоне минимум 3-4 часа, совершив пару входящих вызовов.</span>
+                            </li>
+                            <li class="flex items-start space-x-3.5 bg-white/[0.01] p-4 rounded-2xl border border-white/5">
+                                <span class="text-emerald-400 font-extrabold mt-0.5 text-sm">✔</span>
+                                <span><b>Качество сигнала:</b> Убедитесь, что устройство приема SMS находится в зоне стабильного 4G/LTE покрытия для исключения таймаутов ответа.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="glass-panel p-8 rounded-3xl border border-white/5 flex flex-col justify-center space-y-5 relative overflow-hidden">
+                        <div class="absolute -top-10 -right-10 w-32 h-32 bg-emerald-500/5 rounded-full filter blur-xl"></div>
+                        <div class="flex items-center space-x-3.5 text-emerald-400">
+                            <div class="w-10 h-10 rounded-2xl bg-emerald-500/10 flex items-center justify-center">
+                                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                                    <line x1="12" y1="9" x2="12" y2="13"/>
+                                    <line x1="12" y1="17" x2="12.01" y2="17"/>
+                                </svg>
+                            </div>
+                            <span class="font-black text-sm tracking-wider uppercase">Рекомендация экспертов</span>
+                        </div>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            Если вы работаете по схеме «физическая ферма», используйте качественные USB-модемы или SMS-шлюзы с поддержкой API-интеграции. Наш софт SixtyWork умеет взаимодействовать со сторонними API для автоматической раздачи кодов.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-anti-fraud" class="tab-content hidden space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="space-y-5">
+                        <h3 class="text-2xl sm:text-3xl font-black text-white">Обход защитных алгоритмов при аренде</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed">
+                            Операторы связи используют встроенные фрод-системы (Anti-Fraud) для детекта автоматического приема сообщений. Наш софт SixtyWork использует кастомные прослойки для маскировки запросов.
+                        </p>
+                        <ul class="space-y-4 text-xs text-gray-400">
+                            <li class="flex items-start space-x-3.5 bg-white/[0.01] p-4 rounded-2xl border border-white/5">
+                                <span class="text-blue-400 font-extrabold mt-0.5 text-sm">✔</span>
+                                <span><b>Рандомизация интервалов:</b> Наша платформа запрашивает коды через динамические промежутки времени, имитируя поведение реального человека.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="glass-panel p-8 rounded-3xl border border-white/5 flex flex-col justify-center space-y-5 relative overflow-hidden">
+                        <div class="absolute -top-10 -right-10 w-32 h-32 bg-blue-500/5 rounded-full filter blur-xl"></div>
+                        <div class="flex items-center space-x-3.5 text-blue-400">
+                            <div class="w-10 h-10 rounded-2xl bg-blue-500/10 flex items-center justify-center">
+                                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                </svg>
+                            </div>
+                            <span class="font-black text-sm tracking-wider uppercase">Инновационная Безопасность</span>
+                        </div>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            Использование виртуальных номеров (VoIP) из публичных сервисов строго ограничено. Мы принимаем только реальные Sim-карты, что обеспечивает максимальное качество работы для наших арендаторов и высокие выплаты для вас.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-payouts-rules" class="tab-content hidden space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="space-y-5">
+                        <h3 class="text-2xl sm:text-3xl font-black text-white">Сетка тарифов и регламент выплат</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed">
+                            В SixtyWork MAX RENT действует гибкая сетка начислений в зависимости от выбранного режима сдачи. Вы получаете максимальный доход благодаря прямому выкупу сессий крупными сервисами.
+                        </p>
+                        <ul class="space-y-4 text-xs text-gray-400">
+                            <li class="flex items-start space-x-3.5 bg-white/[0.01] p-4 rounded-2xl border border-white/5">
+                                <span class="text-emerald-400 font-extrabold mt-0.5 text-sm">●</span>
+                                <span><b>Обычная сдача:</b> Стабильно $3.00 за каждую успешную сессию на одной SIM. Стандартная очередь.</span>
+                            </li>
+                            <li class="flex items-start space-x-3.5 bg-white/[0.01] p-4 rounded-2xl border border-white/5">
+                                <span class="text-emerald-400 font-extrabold mt-0.5 text-sm">●</span>
+                                <span><b>Быстрая сдача:</b> Приоритетный выкуп без очереди по тарифу $2.50 за успешный круг.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="glass-panel p-8 rounded-3xl border border-white/5 flex flex-col justify-center space-y-5 relative overflow-hidden">
+                        <div class="absolute -top-10 -right-10 w-32 h-32 bg-emerald-500/5 rounded-full filter blur-xl"></div>
+                        <div class="flex items-center space-x-3.5 text-emerald-400">
+                            <div class="w-10 h-10 rounded-2xl bg-emerald-500/10 flex items-center justify-center">
+                                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                                </svg>
+                            </div>
+                            <span class="font-black text-sm tracking-wider uppercase">Официальные Выплаты</span>
+                        </div>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            Мы осуществляем переводы на банковские карты СНГ (МИР, Visa/Mastercard) и популярные криптовалюты (USDT TRC-20, TRX, TON) без удержания скрытых сборов.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ SECTION -->
+        <section id="faq" class="py-16 scroll-mt-20">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-xs font-black text-emerald-400 uppercase tracking-widest">Отвечаем на вопросы</span>
+                <!-- CRITICAL SEO H2 INTEGRATION -->
+                <h2 class="text-3xl sm:text-5xl font-black text-white mt-1.5">Часто Задаваемые Вопросы (FAQ)</h2>
+                <p class="text-sm text-gray-400 mt-2">Развеиваем страхи и объясняем механику работы софта</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="glass-card rounded-2xl overflow-hidden">
+                    <!-- CRITICAL SEO H3 INTEGRATION INSIDE BUTTONS -->
+                    <button onclick="toggleFaq(this)" class="w-full px-6 py-5.5 text-left flex justify-between items-center hover:bg-white/[0.02] transition">
+                        <h3 class="font-bold text-white text-base">Какова вероятность блокировки моей сим-карт?</h3>
+                        <svg class="w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="hidden px-6 pb-5.5 text-sm text-gray-400 leading-relaxed border-t border-white/5 pt-3.5">
+                        Минимальная. Наш софт SixtyWork не выполняет спам-рассылок и не использует сим-карты для серых схем. Номера задействуются исключительно для легитимных активаций учетных записей (Telegram, WhatsApp, Viber), что полностью снижает риск бана от оператора до нуля.
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full px-6 py-5.5 text-left flex justify-between items-center hover:bg-white/[0.02] transition">
+                        <h3 class="font-bold text-white text-base">Какой лимит сдачи номеров на одного человека?</h3>
+                        <svg class="w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="hidden px-6 pb-5.5 text-sm text-gray-400 leading-relaxed border-t border-white/5 pt-3.5">
+                        Никаких ограничений! Наш серверный пул спроектирован так, чтобы обрабатывать неограниченное количество одновременных подключений. Вы можете залить как 1 личный номер, так и масштабировать свою работу до 500-1000 сим-карт в день.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section class="py-16">
+            <div class="glass-panel p-12 sm:p-16 rounded-[40px] relative overflow-hidden border border-white/10 text-center">
+                <div class="absolute inset-0 bg-gradient-to-tr from-emerald-500/10 via-blue-500/10 to-transparent pointer-events-none"></div>
+                <div class="relative z-10 max-w-xl mx-auto space-y-6">
+                    <div class="w-16 h-16 rounded-3xl bg-purple-500/10 flex items-center justify-center mx-auto mb-4 border border-purple-500/25">
+                        <svg class="w-10 h-10 text-purple-400 animate-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z"/>
+                            <path d="M3 20h18"/>
+                        </svg>
+                    </div>
+                    <h2 class="text-3xl sm:text-5xl font-black text-white leading-tight">Подключайте свои SIM-карты прямо сейчас</h2>
+                    <p class="text-sm text-gray-400">Убедитесь во всех преимуществах премиальной стеклянной платформы MAX RENT на практике. Первая выплата доступна уже через 5 минут работы.</p>
+                    <div class="pt-4">
+                        <a href="https://t.me/SixtyMaxBot" target="_blank" class="premium-shimmer-btn inline-flex items-center space-x-3 px-8 py-5 rounded-2xl text-sm font-black bg-white text-black hover:bg-gray-100 transition transform hover:scale-[1.02] active:scale-95 shadow-2xl">
+                            <span>Начать Ворк в Telegram</span>
+                            <svg class="w-4.5 h-4.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/5 bg-[#010103] relative z-20 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between text-xs text-gray-500 space-y-4 md:space-y-0">
+            <div class="flex items-center space-x-3">
+                <span class="font-extrabold text-white text-sm">SixtyWork Technologies LLC.</span>
+                <span>© 2026. Все права защищены.</span>
+            </div>
+            <div class="flex space-x-6 font-bold">
+                <a href="https://t.me/SixtyMaxBot" target="_blank" class="hover:text-emerald-400 transition">Официальный бот</a>
+                <a href="#calculator" class="hover:text-emerald-400 transition">Калькулятор тарифов</a>
+                <a href="#manuals" class="hover:text-emerald-400 transition">База знаний (Wiki)</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE SCRIPTS -->
+    <script>
+        // Global Pricing Rates
+        let currentRate = 3.00;
+
+        // 1. Audio Engine (Synthesized click sound via Web Audio API)
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        function playKeySound() {
+            try {
+                if (audioCtx.state === 'suspended') {
+                    audioCtx.resume();
+                }
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.type = 'triangle';
+                osc.frequency.setValueAtTime(1400, audioCtx.currentTime);
+                gain.gain.setValueAtTime(0.08, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.08);
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start();
+                osc.stop(audioCtx.currentTime + 0.08);
+            } catch (e) {
+                console.log("Audio Context not started or blocked", e);
+            }
+        }
+
+        function playSuccessSound() {
+            try {
+                if (audioCtx.state === 'suspended') {
+                    audioCtx.resume();
+                }
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(587.33, audioCtx.currentTime); // D5
+                osc.frequency.setValueAtTime(880, audioCtx.currentTime + 0.1); // A5
+                gain.gain.setValueAtTime(0.12, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.35);
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start();
+                osc.stop(audioCtx.currentTime + 0.35);
+            } catch (e) {
+                console.log("Success audio blocked", e);
+            }
+        }
+
+        // 2. Tab switcher Wiki
+        function switchTab(tabId) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.add('hidden'));
+
+            const targetEl = document.getElementById('tab-' + tabId);
+            targetEl.classList.remove('hidden');
+
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('tab-glow-active'));
+
+            document.getElementById('tab-btn-' + tabId).classList.add('tab-glow-active');
+        }
+
+        // 3. Selection rate logic
+        function selectRentType(type) {
+            const btnRegular = document.getElementById('btn-rent-regular');
+            const btnFast = document.getElementById('btn-rent-fast');
+
+            if (type === 'regular') {
+                currentRate = 3.00;
+                btnRegular.className = "flex-1 py-3.5 text-center text-xs font-black uppercase tracking-wider rounded-xl transition duration-300 z-10 text-white bg-emerald-500/15 border border-emerald-500/20";
+                btnFast.className = "flex-1 py-3.5 text-center text-xs font-black uppercase tracking-wider rounded-xl transition duration-300 z-10 text-gray-400 hover:text-white";
+            } else {
+                currentRate = 2.50;
+                btnFast.className = "flex-1 py-3.5 text-center text-xs font-black uppercase tracking-wider rounded-xl transition duration-300 z-10 text-white bg-emerald-500/15 border border-emerald-500/20";
+                btnRegular.className = "flex-1 py-3.5 text-center text-xs font-black uppercase tracking-wider rounded-xl transition duration-300 z-10 text-gray-400 hover:text-white";
+            }
+
+            updateProfit();
+        }
+
+        // 4. Compounding interactive SVG Chart Curve Rendering
+        function drawChart(monthlyProfit) {
+            const curve = document.getElementById('chart-curve-path');
+            const area = document.getElementById('chart-area-path');
+            if(!curve || !area) return;
+
+            const months = 12;
+            let points = [];
+            for (let i = 0; i <= months; i++) {
+                const x = (i / months) * 300;
+                const progressFactor = Math.pow(i / months, 1.45); // Exponential curved growth
+                const heightPercentage = Math.min(1, (i * monthlyProfit) / (100 * 3.00 * 10 * 12)); 
+                const y = 45 - (progressFactor * heightPercentage * 36);
+                points.push(`${x.toFixed(1)},${y.toFixed(1)}`);
+            }
+
+            const pathData = "M" + points.join(" L");
+            curve.setAttribute('d', pathData);
+
+            const areaData = pathData + " L300,50 L0,50 Z";
+            area.setAttribute('d', areaData);
+        }
+
+        // 5. Interactive dynamic calculation updating
+        const simRange = document.getElementById('sim-range');
+        const circlesRange = document.getElementById('circles-range');
+        
+        const simValue = document.getElementById('sim-value');
+        const circlesValue = document.getElementById('circles-value');
+        
+        const payoutResult = document.getElementById('payout-result');
+        const dailyResult = document.getElementById('daily-result');
+        const halfYearResult = document.getElementById('half-year-result');
+        const yearlyResult = document.getElementById('yearly-result');
+
+        function updateProfit() {
+            const sims = parseInt(simRange.value);
+            const circles = parseInt(circlesRange.value);
+            
+            simValue.textContent = `${sims} SIM`;
+            circlesValue.textContent = `${circles} ${getCircleText(circles)}`;
+
+            const daily = sims * circles * currentRate;
+            const monthly = daily * 30;
+            const halfYear = daily * 30 * 6;
+            const yearly = daily * 30 * 12;
+
+            payoutResult.textContent = `$${monthly.toLocaleString('ru-RU')}`;
+            dailyResult.textContent = `$${daily.toFixed(2)}`;
+            halfYearResult.textContent = `$${halfYear.toLocaleString('ru-RU')}`;
+            yearlyResult.textContent = `$${yearly.toLocaleString('ru-RU')}`;
+
+            drawChart(monthly);
+        }
+
+        function getCircleText(val) {
+            if (val === 1) return 'круг';
+            if (val > 1 && val < 5) return 'круга';
+            return 'кругов';
+        }
+
+        simRange.addEventListener('input', updateProfit);
+        circlesRange.addEventListener('input', updateProfit);
+        updateProfit();
+
+        // 6. FAQ Accordion Logic
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('svg');
+            
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        // 7. Strict targets payouts pipeline (Only 6 specified users)
+        const targetUsers = [
+            '@emily_wlk',
+            '@winpaco',
+            '@gospadinEsim',
+            '@AlexanderMakedonskiy4576',
+            '@StaffEternal',
+            '@kuvaldastrike'
+        ];
+        
+        const assets = [
+            { name: 'USDT TRC-20', bg: 'bg-emerald-500/10', text: 'text-emerald-400', icon: '💲' },
+            { name: 'TON Network', bg: 'bg-blue-500/10', text: 'text-blue-400', icon: '💎' },
+            { name: 'МИР СНГ', bg: 'bg-purple-500/10', text: 'text-purple-400', icon: '💳' }
+        ];
+
+        const payoutsBox = document.getElementById('live-payouts-box');
+        const treasuryVal = document.getElementById('sim-total-treasury');
+        let currentTreasury = 14240.10;
+
+        function simulateLiveTransaction() {
+            const randomUser = targetUsers[Math.floor(Math.random() * targetUsers.length)];
+            const sessionsCount = Math.floor(Math.random() * 6) + 1;
+            const sessionPrice = Math.random() > 0.5 ? 3.00 : 2.50;
+            const randomAmount = (sessionsCount * sessionPrice).toFixed(2);
+            const asset = assets[Math.floor(Math.random() * assets.length)];
+            
+            currentTreasury += parseFloat(randomAmount);
+            treasuryVal.textContent = `$${currentTreasury.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+
+            const card = document.createElement('div');
+            card.className = 'p-3 rounded-2xl bg-white/[0.01] border border-white/5 flex items-center justify-between text-xs transition-all duration-700 opacity-0 transform translate-y-6';
+            
+            card.innerHTML = `
+                <div class="flex items-center space-x-2.5">
+                    <div class="w-8 h-8 rounded-xl ${asset.bg} flex items-center justify-center text-sm font-bold">
+                        <span>${asset.icon}</span>
+                    </div>
+                    <div>
+                        <span class="font-bold text-white block">${randomUser}</span>
+                        <span class="text-[9px] text-gray-500 uppercase font-black tracking-widest">${asset.name}</span>
+                    </div>
+                </div>
+                <span class="font-black ${asset.text}">+$${randomAmount}</span>
+            `;
+
+            payoutsBox.insertBefore(card, payoutsBox.firstChild);
+            setTimeout(() => {
+                card.classList.remove('opacity-0', 'translate-y-6');
+                card.classList.add('opacity-100', 'translate-y-0');
+            }, 50);
+
+            if (payoutsBox.children.length > 3) {
+                payoutsBox.removeChild(payoutsBox.lastChild);
+            }
+        }
+
+        // 8. True iOS Interface Simulation Pipeline
+        let phoneDigitsInput = "";
+
+        function advanceIosSim(step) {
+            playKeySound();
+            const step1 = document.getElementById('ios-flow-step-1');
+            const step2 = document.getElementById('ios-flow-step-2');
+            const step3 = document.getElementById('ios-flow-step-3');
+            const step4 = document.getElementById('ios-flow-step-4');
+
+            step1.classList.add('hidden');
+            step2.classList.add('hidden');
+            step3.classList.add('hidden');
+            step4.classList.add('hidden');
+
+            if (step === 1) {
+                step1.classList.remove('hidden');
+                phoneDigitsInput = "";
+                updatePhoneDisplay();
+            } else if (step === 2) {
+                step2.classList.remove('hidden');
+            } else if (step === 3) {
+                step3.classList.remove('hidden');
+                simulateBackendProcessing();
+            } else if (step === 4) {
+                step4.classList.remove('hidden');
+            }
+        }
+
+        function tapIosKey(val) {
+            playKeySound();
+            const submitBtn = document.getElementById('ios-btn-submit-phone');
+            if (val === 'C') {
+                phoneDigitsInput = "";
+            } else if (phoneDigitsInput.length < 10 && val !== '+') {
+                phoneDigitsInput += val;
+            }
+            updatePhoneDisplay();
+
+            if (phoneDigitsInput.length === 10) {
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+                submitBtn.classList.add('opacity-100', 'cursor-pointer');
+            } else {
+                submitBtn.disabled = true;
+                submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
+                submitBtn.classList.remove('opacity-100', 'cursor-pointer');
+            }
+        }
+
+        function updatePhoneDisplay() {
+            const display = document.getElementById('ios-phone-input');
+            if (phoneDigitsInput === "") {
+                display.textContent = "+7 (___) ___-__-__";
+                display.classList.add('text-gray-600');
+                display.classList.remove('text-emerald-400');
+            } else {
+                display.classList.remove('text-gray-600');
+                display.classList.add('text-emerald-400');
+                let formatted = "+7 (";
+                for (let i = 0; i < 10; i++) {
+                    if (i === 3) formatted += ") ";
+                    if (i === 6) formatted += "-";
+                    if (i === 8) formatted += "-";
+                    formatted += phoneDigitsInput[i] || "_";
+                }
+                display.textContent = formatted;
+            }
+        }
+
+        // Processing simulator
+        function simulateBackendProcessing() {
+            const statusText = document.getElementById('ios-proc-status');
+            const statuses = [
+                "Инициализация сокс5 прокси...",
+                "Обход защитного фрод-фильтра...",
+                "Прием сессии...",
+                "Ожидание SMS-кода Telegram..."
+            ];
+            
+            let i = 0;
+            const interval = setInterval(() => {
+                if (i < statuses.length) {
+                    statusText.textContent = statuses[i];
+                    playKeySound();
+                    i++;
+                } else {
+                    clearInterval(interval);
+                    triggerDynamicIslandNotification();
+                }
+            }, 1000);
+        }
+
+        // Dynamic Island integration notification expansion
+        function triggerDynamicIslandNotification() {
+            const island = document.getElementById('dynamic-island');
+            const inner = document.getElementById('island-inner');
+            
+            // Expand Dynamic Island
+            island.classList.add('island-expanded');
+            setTimeout(() => {
+                inner.classList.remove('hidden');
+                playSuccessSound();
+            }, 250);
+
+            // Shrunk and advance
+            setTimeout(() => {
+                inner.classList.add('hidden');
+                island.classList.remove('island-expanded');
+                
+                setTimeout(() => {
+                    advanceIosSim(4);
+                    playSuccessSound();
+                    triggerConfettiInIos();
+                }, 300);
+            }, 3000);
+        }
+
+        // Premium Canvas Sparkles Confetti
+        function triggerConfettiInIos() {
+            // Simulated live reward push to the strict payout pipeline
+            const targetUsersList = targetUsers;
+            const randomUser = targetUsersList[Math.floor(Math.random() * targetUsersList.length)];
+            const card = document.createElement('div');
+            card.className = 'p-3 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-between text-xs transition-all duration-700 opacity-0 transform translate-y-6';
+            
+            card.innerHTML = `
+                <div class="flex items-center space-x-2.5">
+                    <div class="w-8 h-8 rounded-xl bg-emerald-500/20 flex items-center justify-center text-sm">
+                        <span>📲</span>
+                    </div>
+                    <div>
+                        <span class="font-bold text-white block">${randomUser} (Вы)</span>
+                        <span class="text-[9px] text-emerald-400 uppercase font-black tracking-widest">Тестовый круг</span>
+                    </div>
+                </div>
+                <span class="font-black text-emerald-400">+$3.00</span>
+            `;
+
+            payoutsBox.insertBefore(card, payoutsBox.firstChild);
+            setTimeout(() => {
+                card.classList.remove('opacity-0', 'translate-y-6');
+                card.classList.add('opacity-100', 'translate-y-0');
+            }, 50);
+
+            if (payoutsBox.children.length > 3) {
+                payoutsBox.removeChild(payoutsBox.lastChild);
+            }
+        }
+
+        // Live Clock matching user device
+        function updateClock() {
+            const date = new Date();
+            const h = String(date.getHours()).padStart(2, '0');
+            const m = String(date.getMinutes()).padStart(2, '0');
+            document.getElementById('ios-clock').textContent = `${h}:${m}`;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // 9. Card follow lighting mouse movement
+        const cards = document.querySelectorAll('.glass-card');
+        cards.forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+
+        // Loop transactions
+        window.onload = function() {
+            for (let i = 0; i < 3; i++) {
+                simulateLiveTransaction();
+            }
+            setInterval(simulateLiveTransaction, 4500);
+        }
+    </script>
+</body>
+</html>
