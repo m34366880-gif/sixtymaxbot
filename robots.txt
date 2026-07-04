@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+
+Sitemap: https://m34366880-gif.github.io/sixtymaxbot/sitemap.xml
